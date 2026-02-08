@@ -67,7 +67,8 @@
 						<div>
 							<h6>Telefon</h6>
 							<!-- <p class="text-muted mb-0">+998 90 123 45 67</p> -->
-							<a target="_blank" href="tel:+998976731804" class="text-decoration-none text-primary text-muted mb-0"><b>Telefon
+							<a target="_blank" href="tel:+998976731804"
+								class="text-decoration-none text-primary text-muted mb-0"><b>Telefon
 									qo‘ng‘iroq qilish:</b> +998 97 673 18 04</a>
 						</div>
 					</div>
@@ -156,20 +157,46 @@
 
 	<!-- FORM JS -->
 	<script>
-		const form = document.getElementById("contactForm")
-		const successMsg = document.getElementById("successMsg")
-
-		form.addEventListener("submit", function (e) {
+		document.getElementById("contactForm").addEventListener("submit", function (e) {
 			e.preventDefault()
 
+			const name = document.getElementById("name").value.trim()
+			const email = document.getElementById("email").value.trim()
+			const subject = document.getElementById("subject").value.trim()
+			const message = document.getElementById("message").value.trim()
+
+			if (!name || !email || !subject || !message) {
+				alert("Iltimos, barcha maydonlarni to‘ldiring!")
+				return
+			}
+
+			const receiverEmail = "adhammeyliyev8@gmail.com"
+
+			const mailSubject = encodeURIComponent("Saytdan xabar: " + subject)
+			const mailBody = encodeURIComponent(
+				`Ism: ${name}\n` +
+				`Email: ${email}\n\n` +
+				`Xabar:\n${message}`
+			)
+
+			const mailtoLink = `mailto:${receiverEmail}?subject=${mailSubject}&body=${mailBody}`
+
+			// 👇 EMAIL DASTURI OCHILADI
+			window.location.href = mailtoLink
+
+			// Success message
+			const successMsg = document.getElementById("successMsg")
 			successMsg.classList.remove("d-none")
-			form.reset()
+
+			// Form reset
+			this.reset()
 
 			setTimeout(() => {
 				successMsg.classList.add("d-none")
 			}, 4000)
 		});
 	</script>
+
 
 </body>
 
