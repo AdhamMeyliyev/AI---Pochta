@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Demo | Pochta Tahlili</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar demo-nav navbar-expand-lg navbar-dark bg-dark shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">🤖 AI Pochta</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Bosh sahifa</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Xizmatlar</a></li>
+        <li class="nav-item"><a class="nav-link active" href="demo.html">AI Demo</a></li>
+        <li class="nav-item"><a class="nav-link" href="statistics.html">Statistika</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Aloqa</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="demo-header text-white text-center">
+  <div class="container">
+    <h1 class="fw-bold">🧠 AI Live Tahlil</h1>
+    <p class="lead">Sun’iy intellekt pochta jo‘natmasini real vaqtda tahlil qiladi</p>
+  </div>
+</header>
+
+<!-- MAIN -->
+<section class="container my-5">
+  <div class="row g-4">
+
+    <!-- INPUT -->
+    <div class="col-lg-6">
+      <div class="demo-box">
+        <h4>📨 Pochta ma’lumotini kiriting</h4>
+
+        <label class="form-label mt-3">Jo‘natuvchi manzili</label>
+        <input id="sender" type="text" class="form-control" placeholder="Toshkent, Chilonzor">
+
+        <label class="form-label mt-3">Qabul qiluvchi manzili</label>
+        <input id="receiver" type="text" class="form-control" placeholder="Samarqand, Registon">
+
+        <label class="form-label mt-3">Jo‘natma turi</label>
+        <select id="type" class="form-select">
+          <option>Oddiy pochta</option>
+          <option>Tezkor pochta</option>
+          <option>Xalqaro pochta</option>
+        </select>
+
+        <label class="form-label mt-3">Og‘irlik (kg)</label>
+        <input id="weight" type="number" class="form-control" placeholder="2.5">
+
+        <button onclick="analyzeMail()" class="btn btn-primary w-100 mt-4">
+          🚀 AI orqali tahlil qilish
+        </button>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="col-lg-6">
+      <div class="demo-box">
+        <h4>📊 AI Natijasi</h4>
+
+        <div id="result" class="ai-result mt-4 text-muted">
+          AI natijasi shu yerda chiqadi...
+        </div>
+
+        <div class="progress mt-4 d-none" id="progressBox">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:100%">
+            AI ishlamoqda...
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CHATBOT TOGGLE BUTTON -->
+<button id="chat-toggle" class="chat-toggle">💬</button>
+
+<!-- CHATBOT -->
+<div id="chatbot" class="chatbot d-none">
+  <div class="chatbot-header">
+    💬 AI Yordamchi
+    <span id="chat-close">✖</span>
+  </div>
+
+  <div id="chat-body" class="chatbot-body">
+    <div class="chat-message bot-message">
+      <b>Salom!</b> 👋  
+      Pochta jo‘natmalaringizni tahlil qilishda qanday yordam bera olaman?
+    </div>
+  </div>
+
+  <input
+    id="chat-input"
+    class="chatbot-input"
+    placeholder="Savolingizni yozing..."
+  >
+</div>
+
+
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2026 AI Pochta | Live Demo</p>
+</footer>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS -->
+<script src="js/ai-analyze.js"></script>
+<script src="js/chatbot.js"></script>
+
+</body>
+</html>

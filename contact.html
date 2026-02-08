@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aloqa | AI-POST</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Icons -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<!-- ===== NAVBAR ===== -->
+	<nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-white">
+		<div class="container">
+			<a class="navbar-brand fw-bold text-primary" href="index.html">AI-POST</a>
+			<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navMenu">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" href="index.html">Bosh sahifa</a></li>
+					<li class="nav-item"><a class="nav-link" href="services.html">Xizmatlar</a></li>
+					<li class="nav-item"><a class="nav-link" href="demo.html">AI Demo</a></li>
+					<li class="nav-item"><a class="nav-link" href="statistics.html">Statistika</a></li>
+					<li class="nav-item"><a class="nav-link active" href="contact.html">Aloqa</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- ===== HEADER ===== -->
+	<section class="page-header text-white text-center">
+		<div class="container">
+			<h1 class="fw-bold">Biz bilan bog‘laning</h1>
+			<p class="mt-2">Savollaringiz bo‘lsa, biz doim tayyormiz</p>
+		</div>
+	</section>
+
+	<!-- ===== CONTACT SECTION ===== -->
+	<section class="py-5">
+		<div class="container">
+			<div class="row g-5">
+
+				<!-- CONTACT INFO -->
+				<div class="col-lg-5">
+					<h4 class="fw-bold mb-4">Aloqa ma’lumotlari</h4>
+
+					<div class="contact-box mb-3 p-4 shadow-sm">
+						<i class="bi bi-geo-alt-fill fs-3 text-primary"></i>
+						<div>
+							<h6>Manzil</h6>
+							<p class="text-muted mb-0">Toshkent shahri, O‘zbekiston</p>
+						</div>
+					</div>
+
+					<div class="contact-box mb-3 p-4 shadow-sm">
+						<i class="bi bi-telephone-fill fs-3 text-primary"></i>
+						<div>
+							<h6>Telefon</h6>
+							<p class="text-muted mb-0">+998 90 123 45 67</p>
+						</div>
+					</div>
+
+					<div class="contact-box mb-3 p-4 shadow-sm">
+						<i class="bi bi-envelope-fill fs-3 text-primary"></i>
+						<div>
+							<h6>Email</h6>
+							<p class="text-muted mb-0">info@ai-post.uz</p>
+						</div>
+					</div>
+
+					<div class="contact-box p-4 shadow-sm">
+						<i class="bi bi-telegram fs-3 text-primary"></i>
+						<div>
+							<h6>Telegram</h6>
+							<a href="#" class="text-decoration-none">@ai_post_bot</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- CONTACT FORM -->
+				<div class="col-lg-7">
+					<h4 class="fw-bold mb-4">Xabar yuborish</h4>
+
+					<form id="contactForm" class="p-4 shadow-sm rounded-4 bg-white">
+						<div class="row g-3">
+							<div class="col-md-6">
+								<label class="form-label">Ism</label>
+								<input type="text" class="form-control" id="name" required>
+							</div>
+
+							<div class="col-md-6">
+								<label class="form-label">Email</label>
+								<input type="email" class="form-control" id="email" required>
+							</div>
+
+							<div class="col-12">
+								<label class="form-label">Mavzu</label>
+								<input type="text" class="form-control" id="subject" required>
+							</div>
+
+							<div class="col-12">
+								<label class="form-label">Xabar</label>
+								<textarea class="form-control" rows="5" id="message" required></textarea>
+							</div>
+
+							<div class="col-12">
+								<button type="submit" class="btn btn-primary btn-lg w-100">
+									Yuborish
+								</button>
+							</div>
+						</div>
+					</form>
+
+					<!-- SUCCESS MESSAGE -->
+					<div id="successMsg" class="alert alert-success mt-3 d-none">
+						✅ Xabaringiz muvaffaqiyatli yuborildi!
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ===== MAP ===== -->
+	<section class="pb-5">
+		<div class="container">
+			<div class="rounded-4 overflow-hidden shadow-sm">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2812.8539520712366!2d65.71493827540185!3d38.82547985094533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4eafb6c5d9d6d7%3A0xc058e2c9e8c278d2!2sMUHAMMAD%20AL%20XORAZMI%20NOMIDAGI%20TATU%20QARSHI%20FILIALI%20TT%20VA%20KT%20FAKULTETI!5e1!3m2!1sru!2s!4v1770530696948!5m2!1sru!2s"
+					width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===== FOOTER ===== -->
+	<footer class="py-4 bg-dark text-white text-center">
+		<p class="mb-0">© 2026 AI-POST Platformasi</p>
+	</footer>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- FORM JS -->
+	<script>
+		const form = document.getElementById("contactForm")
+		const successMsg = document.getElementById("successMsg")
+
+		form.addEventListener("submit", function (e) {
+			e.preventDefault()
+
+			successMsg.classList.remove("d-none")
+			form.reset()
+
+			setTimeout(() => {
+				successMsg.classList.add("d-none")
+			}, 4000)
+		});
+	</script>
+
+</body>
+
+</html>

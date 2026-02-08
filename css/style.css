@@ -1,0 +1,274 @@
+:root {
+	--primary: #2563eb;
+	--dark: #0f172a;
+	--light: #f8fafc;
+}
+
+body {
+	font-family: 'Segoe UI', sans-serif;
+	padding-top: 70px;
+	background-color: #ffffff;
+}
+
+/* HERO */
+.hero {
+	min-height: 90vh;
+	background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+
+.hero-img {
+	max-height: 420px;
+}
+
+/* FEATURE CARDS */
+.feature-card {
+	border-radius: 16px;
+	transition: 0.3s ease;
+	background-color: #fff;
+}
+
+.feature-card:hover {
+	transform: translateY(-10px);
+}
+
+/* CTA */
+.cta {
+	padding: 80px 0;
+	background: linear-gradient(135deg, #2563eb, #0ea5e9);
+}
+
+/* FOOTER */
+footer {
+	font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+	.hero {
+		text-align: center;
+	}
+
+	.hero h1 {
+		font-size: 28px;
+	}
+
+	.hero-img {
+		max-height: 300px;
+	}
+}
+
+/* ========== Contact style ============ */
+
+/* PAGE HEADER */
+.page-header {
+	padding: 120px 0 80px;
+	background: linear-gradient(135deg, #2563eb, #0ea5e9);
+}
+
+/* CONTACT */
+.contact-box {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	border-radius: 16px;
+	background-color: #fff;
+}
+
+.contact-box h6 {
+	margin-bottom: 4px;
+}
+
+/* FORM */
+form input,
+form textarea {
+	border-radius: 12px;
+}
+
+/* =============== Services style ============ */
+/* SERVICES */
+.service-card {
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	transition: 0.3s ease;
+	background: #fff;
+}
+
+.service-card:hover {
+	transform: translateY(-12px);
+}
+
+.service-icon {
+	font-size: 42px;
+	color: #2563eb;
+}
+
+/* ========= Statistics Styles ========= */
+
+.stats-header {
+	background: linear-gradient(135deg, #0d6efd, #6610f2);
+	padding: 80px 20px;
+}
+
+.stat-card {
+	background: #fff;
+	padding: 30px;
+	border-radius: 16px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s;
+}
+
+.stat-card:hover {
+	transform: translateY(-6px);
+}
+
+.stat-card h2 {
+	font-size: 36px;
+	color: #0d6efd;
+	font-weight: bold;
+}
+
+.chart-box {
+	background: #fff;
+	padding: 25px;
+	border-radius: 16px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ai-insight {
+	background: linear-gradient(135deg, #198754, #20c997);
+	padding: 60px 20px;
+}
+
+.navbar-stats {
+	margin-top: -73px;
+}
+
+
+/* ========= Demo style =========== */
+.demo-header {
+  background: linear-gradient(135deg, #6610f2, #0d6efd);
+  padding: 80px 20px;
+}
+
+.demo-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.ai-result {
+  min-height: 140px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* CHATBOT */
+.chatbot {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 300px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  overflow: hidden;
+}
+
+.chatbot-header {
+  background: #0d6efd;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chatbot-body {
+  height: 200px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.chatbot-input {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  outline: none;
+}
+
+
+.demo-nav{
+	margin-top: -80px;
+}
+
+
+/* CHATBOT TOGGLE */
+.chat-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.3);
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* CHATBOT WINDOW */
+.chatbot {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.chatbot-header {
+  background: #0d6efd;
+  color: #fff;
+  padding: 10px 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header span {
+  cursor: pointer;
+}
+
+.chatbot-body {
+  height: 220px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.chatbot-input {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  outline: none;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .chatbot {
+    width: 90%;
+    right: 5%;
+  }
+}
